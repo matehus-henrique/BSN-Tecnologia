@@ -1,7 +1,8 @@
+
 <ion-content>
-  <h1>Pokedex</h1>
+  <h1 class="pokedex-title">Pokedex</h1>
   <div class="pokedex-list">
-    <div class="pokemon-item" *ngFor="let pokemon of pokemons">
+    <div *ngFor="let pokemon of pokemons" class="pokemon-item">
       <div class="pokemon-thumbnail">
         <img [src]="pokemon.image" [alt]="pokemon.name">
       </div>
@@ -14,5 +15,10 @@
         <p class="pokemon-description">Description: {{ pokemon.description }}</p>
       </div>
     </div>
+  </div>
+
+  <div class="pagination-controls">
+    <ion-button (click)="prevPage()" [disabled]="currentPage === 1">Previous</ion-button>
+    <ion-button (click)="nextPage()">Next</ion-button>
   </div>
 </ion-content>

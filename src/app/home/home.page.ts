@@ -1,4 +1,3 @@
-// home.page.ts
 
 import { Component, OnInit } from '@angular/core';
 import { PokemonService } from '../services/pokeapi.service';
@@ -10,6 +9,9 @@ import { PokemonService } from '../services/pokeapi.service';
 })
 export class HomePage implements OnInit {
   pokemons: any[] = [];
+  limit: number = 20;
+  offset: number = 0;
+  currentPage: number = 1;
 
   constructor(private pokemonService: PokemonService) { }
 
@@ -18,25 +20,41 @@ export class HomePage implements OnInit {
   }
 
   loadPokemons() {
-    const startId = 1; // ID inicial
-    const endId = 100; // ID final
-
-    for (let id = startId; id <= endId; id++) {
-      this.pokemonService.getPokemonDetails(id).subscribe((pokemon: any) => {
-        this.pokemonService.getPokemonSpecies(id).subscribe((species: any) => {
-          const pokemonInfo = {
-            id: id,
-            name: pokemon.name,
-            image: pokemon.sprites.front_default,
-            height: pokemon.height,
-            weight: pokemon.weight,
-            abilities: pokemon.abilities.map((ability: any) => ability.ability.name),
-            types: pokemon.types.map((type: any) => type.type.name),
-            description: species.flavor_text_entries.find((entry: any) => entry.language.name === 'en').flavor_text
-          };
-          this.pokemons.push(pokemonInfo);
+    this.pokemonService.getPokemons(this.limit, this.offset).subscribe(response => {
+      const results = response.results;
+      results.forEach((result: any) => {
+        this.pokemonService.getPokemonDetails(result.name).subscribe(details => {
+          this.pokemons.push({
+            name: details.name,
+            image: details.sprites.front_default,
+            height: details.height,
+            weight: details.weight,
+            abilities: details.abilities.map((ability: any) => ability.ability.name),
+            types: details.types.map((type: any) => type.type.name),
+            description: ''
+          });
+          this.pokemonService.getPokemonSpecies(details.name).subscribe(species => {
+            const flavorText = species.flavor_text_entries.find((entry: any) => entry.language.name === 'en');
+            this.pokemons.find(pokemon => pokemon.name === details.name)!.description = flavorText ? flavorText.flavor_text : 'No description available';
+          });
         });
       });
+    });
+  }
+
+  nextPage() {
+    this.offset += this.limit;
+    this.currentPage++;
+    this.pokemons = [];
+    this.loadPokemons();
+  }
+
+  prevPage() {
+    if (this.offset > 0) {
+      this.offset -= this.limit;
+      this.currentPage--;
+      this.pokemons = [];
+      this.loadPokemons();
     }
   }
 }
