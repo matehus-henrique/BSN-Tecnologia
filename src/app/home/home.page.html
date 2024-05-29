@@ -1,20 +1,18 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content>
+  <h1>Pokedex</h1>
+  <div class="pokedex-list">
+    <div class="pokemon-item" *ngFor="let pokemon of pokemons">
+      <div class="pokemon-thumbnail">
+        <img [src]="pokemon.image" [alt]="pokemon.name">
+      </div>
+      <div class="pokemon-details">
+        <h2 class="pokemon-name">{{ pokemon.name }}</h2>
+        <p class="pokemon-info">Height: {{ pokemon.height }}</p>
+        <p class="pokemon-info">Weight: {{ pokemon.weight }}</p>
+        <p class="pokemon-info">Abilities: {{ pokemon.abilities.join(', ') }}</p>
+        <p class="pokemon-info">Types: {{ pokemon.types.join(', ') }}</p>
+        <p class="pokemon-description">Description: {{ pokemon.description }}</p>
+      </div>
+    </div>
   </div>
 </ion-content>
