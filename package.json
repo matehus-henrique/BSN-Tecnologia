@@ -32,6 +32,10 @@
     "tslib": "^2.3.0",
     "zone.js": "~0.14.2"
   },
+  "styles": [
+    "src/styles.css",
+    "https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+  ],
   "devDependencies": {
     "@angular-devkit/build-angular": "^17.0.0",
     "@angular-eslint/builder": "^17.0.0",
@@ -61,4 +65,5 @@
     "typescript": "~5.2.2"
   },
   "description": "An Ionic project"
+  
 }
