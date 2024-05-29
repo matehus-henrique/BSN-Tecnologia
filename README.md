@@ -16,8 +16,18 @@ Este é um aplicativo de Pokedex desenvolvido com Ionic e Angular. Ele utiliza a
 - TypeScript
 - SCSS
 - PokeAPI
+  
+
+## Funcionalidades
+
+![image](https://github.com/matehus-henrique/BSN-Tecnologia/assets/53536966/82a66603-9d96-471b-823c-d477a1655198)
+
 
 ## Instalação
+
+ Navegue até o diretório do projeto
+-Instale as dependências: npm install
+-Execute o aplicativo: ionic serve
 
 Siga os passos abaixo para configurar o projeto em seu ambiente local:
 
@@ -26,7 +36,8 @@ Siga os passos abaixo para configurar o projeto em seu ambiente local:
 ```bash
 git clone https://github.com/matehus-henrique/BSN-Tecnologia.git
 
-## Navegue até o diretório do projeto
--Instale as dependências: npm install
--Execute o aplicativo: ionic serve
+
+
+
+
 
