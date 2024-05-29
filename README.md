@@ -24,4 +24,9 @@ Siga os passos abaixo para configurar o projeto em seu ambiente local:
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/pokedex-app.git
+git clone https://github.com/matehus-henrique/BSN-Tecnologia.git
+
+## Navegue até o diretório do projeto
+-Instale as dependências: npm install
+-Execute o aplicativo: ionic serve
+
