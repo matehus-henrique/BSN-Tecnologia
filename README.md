@@ -18,7 +18,7 @@ Este é um aplicativo de Pokedex desenvolvido com Ionic e Angular. Ele utiliza a
 - PokeAPI
   
 
-## Funcionalidades
+## Estrutura do Projeto
 
 ![image](https://github.com/matehus-henrique/BSN-Tecnologia/assets/53536966/82a66603-9d96-471b-823c-d477a1655198)
 
