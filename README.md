@@ -9,6 +9,25 @@ Este é um aplicativo de Pokedex desenvolvido com Ionic e Angular. Ele utiliza a
 - Paginação para navegação entre os Pokémon.
 - Estilização personalizada para uma aparência similar a uma Pokedex.
 
+## Sobre o Projeto 
+
+![image](https://github.com/matehus-henrique/BSN-Tecnologia/assets/53536966/7875f602-9038-43d4-870b-8a7080a752f3)
+
+Este é um aplicativo de Pokedex desenvolvido com Ionic e Angular. Ele permite aos usuários visualizar detalhes de vários Pokémon, incluindo imagem, altura, peso, habilidades, tipos e descrição. Utilizando a PokeAPI, o aplicativo busca informações em tempo real para proporcionar uma experiência interativa.
+
+## Tecnologias
+![image](https://github.com/matehus-henrique/BSN-Tecnologia/assets/53536966/3f4894f5-a276-4c2f-a27d-ee1d36e6770b)
+
+O Pokedex App oferece uma interface amigável e colorida, ideal para crianças e fãs de Pokémon. Com um layout inspirado na Pokedex, os usuários podem explorar uma vasta lista de Pokémon, visualizar seus detalhes e aprender mais sobre cada um deles. A aplicação também possui uma funcionalidade de paginação para facilitar a navegação.
+
+## Funcionalidades
+
+![image](https://github.com/matehus-henrique/BSN-Tecnologia/assets/53536966/b95244fd-d728-4d34-bedd-f2c12231d109)
+
+O Pokedex App oferece uma interface amigável e colorida, ideal para crianças e fãs de Pokémon. Com um layout inspirado na Pokedex, os usuários podem explorar uma vasta lista de Pokémon, visualizar seus detalhes e aprender mais sobre cada um deles. A aplicação também possui uma funcionalidade de paginação para facilitar a navegação.
+
+
+
 ## Tecnologias Utilizadas
 
 - Ionic
