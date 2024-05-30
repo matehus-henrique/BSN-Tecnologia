@@ -38,8 +38,7 @@ git clone https://github.com/matehus-henrique/BSN-Tecnologia.git
 -Instale as dependências: npm install
 -Execute o aplicativo: ionic serve
 
-![Roxo e Verde Animado Padrão Abstrato Projeto em Grupo Apresentação Educacional](https://github.com/matehus-henrique/BSN-Tecnologia/assets/53536966/4ba29053-391e-4ccf-bd1e-a2b634910446)
-![Roxo e Verde Animado Padrão Abstrato Projeto em Grupo Apresentação Educacional](https://github.com/matehus-henrique/BSN-Tecnologia/assets/53536966/4ba29053-391e-4ccf-bd1e-a2b634910446)
+
 
 
 
